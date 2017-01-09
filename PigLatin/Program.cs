@@ -18,43 +18,31 @@ namespace PigLatin
             string WordEntered = Console.ReadLine();
             Console.WriteLine(Translation);
             char firstLetter = WordEntered[0];
-            string firstTwoLetters = WordEntered.Substring(0,2);
+            char SecondLetter = WordEntered[1];
+            string Firstletter = firstLetter.ToString();
+            string firstTwoletters = WordEntered.Substring(0,1);
             string FirstVowel = firstLetter.ToString();
-            string FirstTwoCon = firstTwoLetters.ToString();
-            if (FirstVowel == "A")
-            if (FirstVowel == "E")
-            if (FirstVowel == "I")
-            if (FirstVowel == "O")
-                        {
-                            Console.WriteLine($"{WordEntered}way");
-                        }
-                        else if (FirstTwoCon == "B") ;
-                        else if (FirstTwoCon == "C") ;
-                        else if (FirstTwoCon == "D") ;
-                        else if (FirstTwoCon == "F") ;
-                        else if (FirstTwoCon == "G") ;
-                        else if (FirstTwoCon == "H") ;
-                        else if (FirstTwoCon == "I") ;
-                        else if (FirstTwoCon == "J") ;
-                        else if (FirstTwoCon == "K") ;
-                        else if (FirstTwoCon == "L") ;
-                        else if (FirstTwoCon == "M") ;
-                        else if (FirstTwoCon == "N") ;
-                        else if (FirstTwoCon == "P") ;
-                        else if (FirstTwoCon == "Q") ;
-                        else if (FirstTwoCon == "R") ;
-                        else if (FirstTwoCon == "S") ;
-                        else if (FirstTwoCon == "T") ;
-                        else if (FirstTwoCon == "V") ;
-                        else if (FirstTwoCon == "W") ;
-                        else if (FirstTwoCon == "X") ;
-                        else if (FirstTwoCon == "Y") ;
-                        else if (FirstTwoCon == "Z") ;
+            char[] Conletters = { 'B', 'C' ,'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z', 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z' };
+            string Cons = new string(Conletters);
+            char[] Vletters = { 'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u' };
+            string vowels = new string(Vletters);
+            if (vowels.Contains(firstLetter))
             {
-                Console.WriteLine($"{WordEntered.Remove(0,2)}{FirstTwoCon}");
+                Console.WriteLine($"{WordEntered}way");
             }
-
-
+            else if (Cons.Contains(firstTwoletters))
+            {
+                Console.WriteLine($"{WordEntered.Remove(0,1)}{WordEntered.Remove(0,2)}{firstTwoletters}ay");
+            }
+            else
+            {
+                Console.WriteLine($"{WordEntered.Remove(0,1)}{Firstletter}ay");
+            }
         }
     }
 }
+
+
+
+
+
