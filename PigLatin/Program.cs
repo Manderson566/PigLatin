@@ -30,13 +30,15 @@ namespace PigLatin
             {
                 Console.WriteLine($"{WordEntered}way");
             }
-            else if (Cons.Contains(firstTwoletters))
-            {
-                Console.WriteLine($"{WordEntered.Remove(0,1)}{WordEntered.Remove(0,2)}{firstTwoletters}ay");
+            else if (Cons.Contains(Firstletter) && Cons.Contains(SecondLetter))
+                {
+                string RemoveFirstTwo = WordEntered.Remove(0 ,2);
+                Console.WriteLine($"{RemoveFirstTwo}{firstTwoletters}ay");
             }
-            else
+            else if (Cons.Contains(Firstletter) && vowels.Contains(SecondLetter))
             {
-                Console.WriteLine($"{WordEntered.Remove(0,1)}{Firstletter}ay");
+                string RemoveFirstOne = WordEntered.Remove(0, 1);
+                Console.WriteLine($"{RemoveFirstOne}{Firstletter}ay");
             }
         }
     }
