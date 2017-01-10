@@ -13,7 +13,6 @@ namespace PigLatin
             string Translation = "This is the Pig Lating Translation";
             string EnterWord = "Enter word here";
 
-
             Console.WriteLine(EnterWord);
             string WordEntered = Console.ReadLine();
             Console.WriteLine(Translation);
